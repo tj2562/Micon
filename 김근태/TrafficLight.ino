@@ -1,8 +1,8 @@
-int LED1=13;
+  int LED1=13;
   int LED2=12;
   int b=2;
   int count=0;
-  int gap=500;
+
 void setup() {
   // put your setup code here, to run once:
   pinMode(LED1,OUTPUT);
@@ -28,6 +28,7 @@ void loop() {
     digitalWrite(LED2,HIGH);
     delay(600);
   }
+  ///////LED가 두개 밖에 없어서 마지막은 두개가 동시에 켜지는 걸로 진행하였습니다.
 
  
 
