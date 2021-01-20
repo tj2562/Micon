@@ -20,9 +20,9 @@ void loop() {
   }
   
   else
-  color++;
+  color++;             // 스위치가 눌려있는 경우 -> color 값이 매우 빠르게 증가함
                     
-  if(color%3 ==1 )     
+  if(color%3 ==1 )     //스위치가 눌리는 조건은 sw == 0 일때로 보면됨. 이번 코드에서 color 변수는 불필요한 과정
     {
     digitalWrite(13,HIGH);
     digitalWrite(12,LOW);

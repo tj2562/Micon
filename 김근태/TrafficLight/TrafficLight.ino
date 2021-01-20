@@ -15,7 +15,7 @@ void loop() {
 
    digitalWrite(LED1,LOW);
    digitalWrite(LED2,LOW);
-
+  // b-> push, switch 등의 변수명으로 하면 가독성향상
   if(digitalRead(b)==LOW)
   {
     digitalWrite(LED1,HIGH);
@@ -29,6 +29,8 @@ void loop() {
     delay(600);
   }
   ///////LED가 두개 밖에 없어서 마지막은 두개가 동시에 켜지는 걸로 진행하였습니다.
+
+  //good!
 
  
 

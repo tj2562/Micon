@@ -1,5 +1,5 @@
 int SW=2;
-int Red=11,Yellow=10,Green=9;
+int Red=11,Yellow=10,Green=9; //색으로 핀지정 good
 
 void setup()
 {

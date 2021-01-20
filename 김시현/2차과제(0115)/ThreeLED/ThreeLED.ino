@@ -2,7 +2,7 @@ int green=13;
 int yellow=12;
 int red=11;
 int push=2;
-
+// 의미있는 변수명 good
 void setup() {
   pinMode(push, INPUT_PULLUP);
   pinMode(green, OUTPUT);

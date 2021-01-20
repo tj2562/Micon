@@ -1,6 +1,6 @@
 int YELLOW_Pin = 8;
-int WHITE_Pin = 9;
-
+int BLUE_Pin = 9;
+// 색으로 핀설정 good
 void setup() 
 {
   pinMode(2, INPUT_PULLUP);
@@ -9,7 +9,7 @@ void setup()
 }
 void loop() {
   int sw = digitalRead(2);
-  if(!sw)
+  if(!sw) //! 사용 good
   {
     digitalWrite(YELLOW_Pin,HIGH);
     digitalWrite(BLUE_Pin, LOW);
@@ -18,5 +18,6 @@ void loop() {
   {
     digitalWrite(YELLOW_Pin,LOW);
     digitalWrite(BLUE_Pin, HIGH);
+   
   }
 }
