@@ -1,4 +1,4 @@
-////아나로그로 LED 밝아졌다가 어두워지는 것 반복
+//아나로그로 LED 밝아졌다가 어두워지는 것 반복
 void setup() {
   Serial.begin(9600);
   pinMode(11,OUTPUT);
