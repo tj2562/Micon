@@ -23,13 +23,13 @@ if(button == true) {
     digitalWrite(red, LOW);
     delay(600);
     }
-        else{
+        else{   // if와 else는 동일한 수준이므로, 들여쓰기를 맞춰주시면 좋을것 같아요~~
           digitalWrite(green,HIGH);
           delay(600);
           digitalWrite(yellow,HIGH);
           delay(600);
           digitalWrite(red,HIGH);
           delay(600);
-          }
+          }//good
       
 }

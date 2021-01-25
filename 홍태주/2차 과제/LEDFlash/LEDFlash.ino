@@ -1,9 +1,10 @@
 int ledG=13;
 int ledY=12;
 int ledR=11;
-
+//색깔로 핀 번호 지정하는 것 좋음.
 
 void setup() {
+  //들여쓰기 추천
 pinMode(ledG,OUTPUT);
 pinMode(ledY,OUTPUT);
 pinMode(ledR,OUTPUT);
