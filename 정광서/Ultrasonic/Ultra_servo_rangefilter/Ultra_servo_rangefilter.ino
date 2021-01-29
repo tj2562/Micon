@@ -5,7 +5,9 @@ int echoPin = 7;
 int trigPin = 8;
 float duration;
 float distance;
+
 int prevDistance = 0;
+
 void setup() 
 {
   myservo.attach(9); //서보모터 핀번호를 9번으로 설정
@@ -20,7 +22,12 @@ void loop()
   digitalWrite(trigPin, LOW);
   duration = pulseIn(echoPin, HIGH); // echoPin 이 HIGH를 유지한 시간을 저장
   distance = ((float)(340 * duration) / 10000) / 2; // 거리 계산
-  // 측정된 거리 값를 시리얼 모니터에 출력
+  
+  /*// 측정된 거리 값를 시리얼 모니터에 출력
+  28 2900 -> 28 28 -> 0    28     50    50
+                     prev dist
+                          prev   dist   
+                                 prev    dist */
   if(distance >= 2500) distance = prevDistance;
   Serial.println(distance);
 

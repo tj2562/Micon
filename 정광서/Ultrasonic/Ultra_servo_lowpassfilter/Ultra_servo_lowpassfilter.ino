@@ -6,8 +6,11 @@ int trigPin = 8;
 float duration;
 float distance;
 int prev_distance = 50;
+
 int filt_distance = 50;
+
 float alpha = 0.2; //민감도 = 새로운값 반영 정도
+
 void setup() 
 {
   myservo.attach(9); //서보모터 핀번호를 9번으로 설정
@@ -24,10 +27,13 @@ void loop()
   distance = ((float)(340 * duration) / 10000) / 2; // 거리 계산
   // 측정된 거리 값를 시리얼 모니터에 출력
   if(distance >= 2500) distance = prev_distance;
+  
   filt_distance = prev_distance * (1 - alpha) + distance * alpha; //필터 계산식
+  
   Serial.print(distance);
   Serial.print(","); //여러값 플로팅
   Serial.println(filt_distance); 
+  
   // 측정된 거리가 10cm 이하라면, Servo 90도 회전
   
   if (distance < 10) 

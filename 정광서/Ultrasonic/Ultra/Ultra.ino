@@ -1,6 +1,4 @@
 
-
-int pos = 10; // 일단 서보모터 각도를 10으로 맞춘다.
 int echoPin = 7;
 int trigPin = 8;
 float duration;
